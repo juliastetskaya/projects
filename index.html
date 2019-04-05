@@ -35,7 +35,7 @@
               <a href="#">Log in</a>
             </li>
             <li class="user-list__item">
-              <a href="#">Sign up</a>
+              <a href="#" class="button">Sign up</a>
             </li>
           </ul>
           <ul class="main-nav__list lang-list">
@@ -61,7 +61,7 @@
           <h2 class="visually-hidden">Account and social networks</h2>
           <ul class="account__list">
             <li class="account__item">
-              <a href="#">Create account</a>
+              <a href="#" class="button">Create account</a>
             </li>
             <li class="account__item">
               <a href="#">
@@ -76,41 +76,48 @@
           </ul>
           <ul class="social__list">
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link social__link--google">
                 <span class="visually-hidden">Google+</span>
               </a>
             </li>
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link social__link--facebook">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link social__link--twitter">
                 <span class="visually-hidden">Twitter</span>
               </a>
             </li>
           </ul>
         </section>
         <section class="advantages">
-          <h2 class="visually-hidden">Сompany advantages</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__title">Swiss Privacy</h3>
-              <p class="advantages__title-addition">Data Security and Neutrality</p>
-              <p class="advantage__info">NeutronMail is incorporated in Somewhere and all our servers are located in Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Double Encryption</h3>
-              <p class="advantages__title-addition">Automatic Email Security</p>
-              <p class="advantage__info">All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt and read your emails. As a result, your encrypted emails cannot be shared with third parties.</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Anonymous Email</h3>
-              <p class="advantages__title-addition">Protect Your Privacy</p>
-              <p class="advantage__info">No personal information is required to create your secure email account. By default, we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.</p>
-            </li>
-          </ul>
+          <div class="advantages__wrapper slider">
+            <h2 class="visually-hidden">Сompany advantages</h2>
+            <ul class="advantages__list slider__list">
+              <li class="advantages__item advantages__item--privacy slider__item">
+                <h3 class="advantages__title">Swiss Privacy</h3>
+                <p class="advantages__title-addition">Data Security and Neutrality</p>
+                <p class="advantage__info">NeutronMail is incorporated in Somewhere and all our servers are located in Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
+              </li>
+              <li class="advantages__item advantages__item--encryption slider__item">
+                <h3 class="advantages__title">Double Encryption</h3>
+                <p class="advantages__title-addition">Automatic Email Security</p>
+                <p class="advantage__info">All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt and read your emails. As a result, your encrypted emails cannot be shared with third parties.</p>
+              </li>
+              <li class="advantages__item advantages__item--email slider__item">
+                <h3 class="advantages__title">Anonymous Email</h3>
+                <p class="advantages__title-addition">Protect Your Privacy</p>
+                <p class="advantage__info">No personal information is required to create your secure email account. By default, we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.</p>
+              </li>
+            </ul>
+            <p class="advantages__toggle slider__toggle">
+              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+            </p>
+          </div>
         </section>
         <section class="physical-security">
           <h3 class="physical-security__title">Physical Security</h3>
@@ -121,27 +128,27 @@
           <h3 class="visually-hidden">Press about us</h3>
           <ul class="magazines__list">
             <li class="magazines__item">
-              <a href="#">
+              <a href="#" class="magazines__link magazines__link--nytimes">
                 <span class="visually-hidden">The New York Times</span>
               </a>
             </li>
             <li class="magazines__item">
-              <a href="#">
+              <a href="#" class="magazines__link magazines__link--guardian">
                 <span class="visually-hidden">The Guardian</span>
               </a>
             </li>
             <li class="magazines__item">
-              <a href="#">
+              <a href="#" class="magazines__link magazines__link--forbes">
                 <span class="visually-hidden">Forbes</span>
               </a>
             </li>
             <li class="magazines__item">
-              <a href="#">
+              <a href="#" class="magazines__link magazines__link--allgemeine">
                 <span class="visually-hidden">Frankfurter Allgemeine</span>
               </a>
             </li>
             <li class="magazines__item">
-              <a href="#">
+              <a href="#" class="magazines__link magazines__link--fox-news">
                 <span class="visually-hidden">Fox News</span>
               </a>
             </li>
@@ -150,13 +157,16 @@
         <section class="news">
           <h3 class="visually-hidden">News about security</h3>
           <ul class="news__list">
-            <li class="news__item">A new email service being developed by a group from MIT and CERN promises to bring secure, encrypted email to the masses and keep sensitive information away from prying eyes. <span class="author">— Boston Herald</span></li>
+            <li class="news__item">
+              <p class="news_text">A new email service being developed by a group from MIT and CERN promises to bring secure, encrypted email to the masses and keep sensitive information away from prying eyes. </p>
+              <cite class="news__author">— Boston Herald</cite>
+            </li>
           </ul>
-          <ul class="news__pagination-list">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
+          <p class="news__toggle slider__toggle">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
         </section>
         <section class="any-devices">
           <h3 class="any-devices__title">Any device, anywhere</h3>
@@ -179,45 +189,45 @@
           <p class="partners__description">Your support helps us to protect privacy world-wide.</p>
           <ul class="donate-list">
             <li class="donate-list__item">
-              <a href="#">Upgrade to Paid Plan</a>
+              <a href="#" class="button">Upgrade to Paid Plan</a>
             </li>
             <li class="donate-list__item">
-              <a href="#">Donate</a>
+              <a href="#" class="button">Donate</a>
             </li>
           </ul>
           <p class="contributors">Those, who help us secure your privacy</p>
           <ul class="contributors__list">
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--venture-mentoring">
                 <span class="visually-hidden">Venture Mentoring</span>
               </a>
             </li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--deltalis">
                 <span class="visually-hidden">Deltalis</span>
               </a>
             </li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--fongit">
                 <span class="visually-hidden">Fongit</span>
               </a>
             </li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--quovadis">
                 <span class="visually-hidden">QuoVadis</span>
               </a></li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--cyberkov">
                 <span class="visually-hidden">Cyberkov</span>
               </a>
             </li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--radware">
                 <span class="visually-hidden">Radware</span>
               </a>
             </li>
             <li class="contributors__item">
-              <a href="#">
+              <a href="#" class="contributors__link contributors__link--ipmax">
                 <span class="visually-hidden">Ipmax</span>
               </a>
             </li>
@@ -225,7 +235,7 @@
         </section>
       </main>
       <footer class="page-footer">
-        <div class="footer-wrapper">
+        <div class="page-footer__wrapper">
           <div class="contacts">
             <ul class="contacts__list">
               <li>General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a></li>
