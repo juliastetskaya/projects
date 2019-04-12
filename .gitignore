@@ -1,4 +1,12 @@
+
+.DS_Store
 .idea
-node_modules
-*.bundle.js
+.vscode
+*.ai
 *.log
+*.pdf
+*.psd
+node_modules/
+npm-debug.*
+assets/css/*.map
+Thumbs.db

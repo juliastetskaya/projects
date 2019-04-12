@@ -1,0 +1,40 @@
+{
+  "name": "neutronmail",
+  "version": "0.0.1",
+  "description": "neutronmail project",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"assets/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp css",
+    "start": "gulp start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliastetskaya/NeutronMail.git"
+  },
+  "keywords": [
+    "neutronmail"
+  ],
+  "author": "Julia Stetskaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliastetskaya/NeutronMail/issues"
+  },
+  "homepage": "https://github.com/juliastetskaya/NeutronMail#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "stylelint": "^9.10.1",
+    "stylelint-config-htmlacademy": "^0.1.3"
+  }
+}
