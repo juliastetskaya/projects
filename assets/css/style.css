@@ -1,2 +1,311 @@
+@font-face {
+  font-family: "Malaga Narrow";
+  src: url("../fonts/MalagaNarrowOTRegItalic.otf") format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+.account__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.advantages__title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: #555555;
+}
+.advantages__title-addition {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.advantage__info {
+  letter-spacing: 0.1px;
+}
+.any-devices__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #535353;
+  letter-spacing: 0.2px;
+}
+.any-devices__discription {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.15px;
+}
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumbs__link {
+  font-size: 12px;
+  color: #5c5c5c;
+}
+.button {
+  text-decoration: none;
+  background-color: #582c7e;
+  box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15), 0px 13px 21px 0px rgba(20, 80, 204, 0.27), 0px 13px 21px 0px rgba(0, 0, 0, 0.15), 0px 4px 16px 0px rgba(102, 145, 233, 0.33), 0px 4px 16px 0px rgba(0, 0, 0, 0.09), 0px 3px 9px 0px rgba(53, 103, 205, 0.09), 0px 3px 9px 0px rgba(0, 0, 0, 0.09), 0px 3px 3px 0px rgba(102, 145, 233, 0.09), 0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.company__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 23px;
+  color: #5c5c5c;
+  letter-spacing: 0.2px;
+}
+.company__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.company__link {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contacts__item {
+  color: #5c5c5c;
+  letter-spacing: 0.13px;
+}
+.contacts__link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #5c5c5c;
+}
+.contacts-support {
+  margin: 0;
+  color: #5c5c5c;
+  letter-spacing: 0.15px;
+}
+.contacts-support__link {
+  color: #5c5c5c;
+  font-weight: 700;
+}
+.contributors {
+  margin: 0;
+  color: #7a7a7a;
+  letter-spacing: 0.1px;
+}
+.contributors__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.copyright {
+  font-size: 12px;
+  color: #5c5c5c;
+  letter-spacing: 0.1px;
+}
+.donate-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lang-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lang-list__link {
+  text-decoration: none;
+  color: #959595;
+}
+.lang-list__item--active {
+  font-weight: 700;
+}
+.legal__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 23px;
+  color: #5c5c5c;
+  letter-spacing: 0.2px;
+}
+.legal__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.legal__link {
+  text-decoration: none;
+  color: #5c5c5c;
+  letter-spacing: 0.1px;
+}
+.magazines__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.neutronmail__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 23px;
+  color: #5c5c5c;
+  letter-spacing: 0.2px;
+}
+.neutronmail__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.neutronmail__link {
+  text-decoration: none;
+  color: #5c5c5c;
+  letter-spacing: 0.1px;
+}
+.news__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.news__text {
+  margin: 0;
+  font-family: "Malaga Narrow";
+  font-style: italic;
+  font-size: 24px;
+  line-height: 31px;
+  color: #101010;
+}
+.news__author {
+  font-family: "Malaga Narrow";
+  font-size: 16px;
+  line-height: 32px;
+  color: #727272;
+  letter-spacing: 0.6px;
+}
+.page-header__logo {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: #858688;
+}
+.page-header__logo span {
+  color: #5b4295;
+}
+.page-main__title {
+  margin: 0;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 600;
+  color: #636363;
+  letter-spacing: 0.6px;
+}
+.page-main__title-addition {
+  margin: 0;
+  font-size: 36px;
+  line-height: 42px;
+  color: #636363;
+  letter-spacing: 0.4px;
+}
+.page-main__title-addition span {
+  color: #fc444a;
+}
+.partners__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #535353;
+  letter-spacing: 0.3px;
+}
+.partners__description {
+  margin: 0;
+  font-size: 29px;
+  line-height: 37px;
+  letter-spacing: 0.2px;
+  color: #7c7c7c;
+}
+.physical-security__title {
+  margin: 0;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 400;
+  color: #535353;
+  letter-spacing: 0.6px;
+}
+.physical-security__description {
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+.physical-security__description span {
+  color: #f65151;
+}
+.physical-security__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: #676767;
+  letter-spacing: 0.3px;
+}
+.shops-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-list__link {
+  text-decoration: none;
+  color: #454545;
+  font-size: 16px;
+  line-height: 25px;
+}
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.user-list__link {
+  text-decoration: none;
+  color: #454545;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.user-list__link.button {
+  color: #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #959393;
+  background-image: url('../img/bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 
 /*# sourceMappingURL=style.css.map */

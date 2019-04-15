@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "Malaga Narrow";
+  src: url("../fonts/MalagaNarrowOTRegItalic.otf") format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
 @import "blocks/account.less";
 @import "blocks/advantages.less";
 @import "blocks/any-devices.less";
 @import "blocks/breadcrumbs.less";
+@import "blocks/button.less";
 @import "blocks/company.less";
 @import "blocks/contacts.less";
 @import "blocks/contributors.less";
@@ -25,3 +34,19 @@
 @import "blocks/slider.less";
 @import "blocks/social.less";
 @import "blocks/user-list.less";
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Titillium Web', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgb(149, 147, 147);
+
+  background-image: url('../img/bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+}
