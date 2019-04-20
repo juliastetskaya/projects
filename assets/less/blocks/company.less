@@ -14,3 +14,49 @@
   .link-style;
   color: #5c5c5c;
 }
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .company {
+    margin-top: 1px;
+    margin-right: 111px;
+    text-align: right;
+
+    position: relative;
+  }
+
+  .company__title {
+    margin-bottom: 25px;
+  }
+
+  .company__item {
+    position: relative;
+    margin-bottom: 1px;
+    padding-right: 14px;
+  }
+
+  .company__item::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #5c5c5c;
+
+    position: absolute;
+    top: 10px;
+    right: 2px;
+  }
+
+  .company::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 194%;
+    top: 1%;
+    right: -36%;
+    background-color: #b9b9b9;
+  }
+}
+
+

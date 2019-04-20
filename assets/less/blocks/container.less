@@ -1,0 +1,34 @@
+.container {
+  max-width: 320px;
+  //padding: 0 10px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+}
+@media (min-width: @tablet-width) {
+  .container {
+    max-width: 768px;
+    //padding: 0 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 10px;
+    background: url(../img/any-devices.png) no-repeat 91% 1251px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1800px;
+    width: 1410px;
+    padding: 0 5px;
+    background: url(../img/any-devices.png) no-repeat 91% 1251px;
+  }
+}
+
+

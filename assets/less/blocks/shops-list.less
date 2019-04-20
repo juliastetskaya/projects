@@ -1,3 +1,27 @@
 .shops-list {
   .list-style;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 381px;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .shops-list__link {
+    display: block;
+    width: 193px;
+    height: 60px;
+
+  }
+
+  .shops-list__link--app-store {
+    background: url("../img/app-store.png") no-repeat 50% 0;
+  }
+
+  .shops-list__link--google-play {
+    background: url("../img/google-play.png") no-repeat 50% 0;
+  }
 }

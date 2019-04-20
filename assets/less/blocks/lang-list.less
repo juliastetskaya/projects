@@ -10,3 +10,44 @@
 .lang-list__item--active {
   font-weight: 700;
 }
+
+.lang-list {
+  background-color: #cfcdf7;
+}
+
+
+@media (min-width: @tablet-width) {
+  .lang-list {
+    display: flex;
+    justify-content: space-between;
+    width: 237px;
+    letter-spacing: 0.3px;
+
+    position: absolute;
+    top: -130px;
+    right: 0;
+  }
+
+  .lang-list__item {
+    position: relative;
+  }
+
+  .lang-list__item::after {
+    content: "/";
+    position: absolute;
+    top: 0;
+    right: -16px;
+  }
+
+  .lang-list__item:last-child::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .lang-list {
+    padding-top: 22px;
+    top: 0;
+    left: 0;
+  }
+}

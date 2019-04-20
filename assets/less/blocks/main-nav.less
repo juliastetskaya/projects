@@ -1,0 +1,24 @@
+.main-nav {
+  position: relative;
+  background-color: #e996f8;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    margin-top: -30px;
+    justify-content: flex-end;
+  }
+}
+
+

@@ -5,12 +5,15 @@
   font-weight: 400;
   color: #535353;
   letter-spacing: 0.6px;
+  text-align: right;
 }
 
 .physical-security__description {
+  margin: 0;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 23px;
   letter-spacing: 0.2px;
+  text-align: right;
 }
 
 .physical-security__description span {
@@ -23,4 +26,56 @@
   line-height: 22px;
   color: #676767;
   letter-spacing: 0.3px;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .physical-security {
+    //margin-left: 280px;
+    margin-bottom: 39px;
+    //width: 627px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .physical-security__title {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-right: 21px;
+  }
+
+  .physical-security__description {
+    width: 627px;
+    margin: 0 auto;
+    padding-right: 5px;
+    margin-bottom: 25px;
+    margin-left: 20%;
+  }
+
+  .physical-security__link {
+    font-weight: 400;
+    margin: 0 auto;
+    margin-left: 55.3%;
+
+    background-color: #ffffff;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 16px 30px 22px 29px;
+    border-radius: 31px;
+  }
+
+  .physical-security__link::before {
+    content: "";
+    width: 58.1%;
+    height: 1px;
+    position: absolute;
+    top: 1073px;
+    left: 0;
+    background-color: #bfbfbf;
+    z-index: -1;
+  }
+
 }

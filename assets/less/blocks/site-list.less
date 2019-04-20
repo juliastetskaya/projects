@@ -8,3 +8,28 @@
   font-size: 16px;
   line-height: 25px;
 }
+
+.site-list {
+  background-color: #96ddf8;
+}
+
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 15px;
+  }
+
+  .site-list__item {
+    margin-right: 26px;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 500px;
+    padding: 7px 31px;
+  }
+}

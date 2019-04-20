@@ -1,5 +1,5 @@
 .page-main__title {
-  margin: 0;
+  margin: 0 auto;
   font-size: 60px;
   line-height: 72px;
   font-weight: 600;
@@ -8,7 +8,7 @@
 }
 
 .page-main__title-addition {
-  margin: 0;
+  margin: 0 auto;
   font-size: 36px;
   line-height: 42px;
   color: #636363;
@@ -17,4 +17,21 @@
 
 .page-main__title-addition span {
   color: #fc444a;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    position: relative;
+  }
+
+  .page-main__title {
+    margin-bottom: 8px;
+  }
+
+  .page-main__title-addition {
+    margin-bottom: 88px;
+  }
 }

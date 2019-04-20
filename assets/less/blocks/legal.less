@@ -15,3 +15,37 @@
   color: #5c5c5c;
   letter-spacing: 0.1px;
 }
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .legal {
+    min-width: 140px;
+    margin-top: 1px;
+    text-align: right;
+    margin-right: 82px;
+  }
+
+  .legal__title {
+    margin-bottom: 25px;
+  }
+
+  .legal__item {
+    position: relative;
+    margin-bottom: 1px;
+    padding-right: 14px;
+  }
+
+  .legal__item::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #5c5c5c;
+
+    position: absolute;
+    top: 11px;
+    right: 1px;
+  }
+}
+

@@ -1,0 +1,36 @@
+.slider__button {
+  background-color: #b7b7b7;
+  border-radius: 50%;
+
+  padding: 5.5px;
+  width: 5px;
+  height: 5px;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .news__toggle {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: -6px;
+    left: -39px;
+  }
+
+  .slider__button {
+    margin-bottom: 11px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .slider__button--active {
+    background-color: #101010;
+    padding: 6.5px;
+  }
+}

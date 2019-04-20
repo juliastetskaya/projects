@@ -13,3 +13,43 @@
   line-height: 22px;
   letter-spacing: 0.15px;
 }
+
+@media (min-width: @tablet-width) {
+}
+
+// @media (min-width: 1200px) and (max-width: 1399px) {
+//   .any-devices {
+//     //margin-left: 23.43%;
+//   }
+// }
+
+@media (min-width: @desktop-width) {
+  .any-devices {
+    width: 440px;
+
+    margin-left: 33.43%;
+    text-align: right;
+    margin-bottom: 231px;
+  }
+
+  .any-devices__title {
+    margin-bottom: 15px;
+  }
+
+  .any-devices__discription {
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 30px;
+  }
+
+  .any-devices::before {
+    content: "";
+    position: absolute;
+    width: 77.8%;
+    height: 1px;
+    right: 0;
+    bottom: 454px;
+    background-color: #b9b9b9;
+    z-index: -1;
+  }
+}

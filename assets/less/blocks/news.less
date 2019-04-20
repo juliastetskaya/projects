@@ -4,11 +4,13 @@
 
 .news__text {
   margin: 0;
-  font-family: "Malaga Narrow";
+  font-family: "Malaga";
   font-style: italic;
   font-size: 24px;
   line-height: 31px;
   color: #101010;
+  letter-spacing: 0.25px;
+  margin-bottom: 3px;
 }
 
 .news__author {
@@ -16,5 +18,17 @@
   font-size: 16px;
   line-height: 32px;
   color: #727272;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.7px;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .news {
+    position: relative;
+    width: 530px;
+    margin-left: 203px;
+    margin-bottom: 108px;
+  }
 }

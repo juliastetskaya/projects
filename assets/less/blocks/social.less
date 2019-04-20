@@ -1,3 +1,43 @@
 .social__list {
   .list-style;
 }
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .social__link {
+    display: block;
+    width: 22px;
+    height: 22px;
+
+    position: absolute;
+    top: 0;
+    right: 31px;
+  }
+
+  .social__item {
+    margin-bottom: 10px;
+  }
+
+  .fa-google-plus-square,
+  .fa-facebook,
+  .fa-twitter-square {
+    font-size: 22px;
+    color: #5c5c5c;
+    background-color: #ffffff;
+  }
+
+  .social__link--google {
+    top: 14px;
+  }
+
+  .social__link--facebook {
+    top: 52px;
+  }
+
+  .social__link--twitter {
+    top: 89px;
+  }
+}
+

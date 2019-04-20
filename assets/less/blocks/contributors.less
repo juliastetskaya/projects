@@ -1,9 +1,87 @@
-.contributors {
+.contributors__text {
   margin: 0;
   color: #7a7a7a;
   letter-spacing: 0.1px;
+  margin-left: auto;
 }
 
 .contributors__list {
   .list-style;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .contributors__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 952px;
+  }
+
+  .contributors__list {
+    display: flex;
+    margin-left: auto;
+
+    margin-top: -3px;
+  }
+
+  .contributors__link {
+    display: block;
+    height: 92px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  .contributors__link--venture-mentoring {
+    width: 80px;
+    margin-right: 45px;
+    background-image: url("../img/venture_mentoring.jpg");
+  }
+
+  .contributors__link--deltalis {
+    width: 100px;
+    margin-right: 33px;
+    background-image: url("../img/deltalis_1.jpg");
+  }
+
+  .contributors__link--fongit {
+    width: 110px;
+    margin-right: 26px;
+    background-image: url("../img/fongit.jpg");
+  }
+
+  .contributors__link--quovadis {
+    width: 114px;
+    margin-right: 56px;
+    background-image: url("../img/quovadis.jpg");
+  }
+
+  .contributors__link--cyberkov {
+    width: 50px;
+    margin-right: 47px;
+    background-image: url("../img/cyberkov.jpg");
+  }
+
+  .contributors__link--radware {
+    width: 130px;
+    margin-right: 48px;
+    background-image: url("../img/radware.jpg");
+  }
+
+  .contributors__link--ipmax {
+    width: 50px;
+    background-image: url("../img/ipmax.jpg");
+  }
+
+  .contributors__wrapper::before {
+    content: "";
+    position: absolute;
+    width: 77.8%;
+    height: 1px;
+    bottom: 127px;
+    left: 0;
+    background-color: #b9b9b9;
+  }
 }

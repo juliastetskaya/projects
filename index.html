@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="assets/css/normalize.css" rel="stylesheet">
 
     <title>Secure Email Communication</title>
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page">
+    <header class="page-header container">
       <a href="#" class="page-header__logo">neutron<span>Mail</span></a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Open menu</button>
@@ -36,62 +39,71 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a href="#" class="user-list__link">Log in</a>
+              <a href="#" class="user-list__link">
+                <i class="fas fa-sign-in-alt"></i>&nbsp;
+                Log in</a>
             </li>
             <li class="user-list__item">
               <a href="#" class="user-list__link button">Sign up</a>
             </li>
           </ul>
-          <ul class="main-nav__list lang-list">
-            <li class="lang-list__item lang-list__item--active">
-              <a>English</a>
-            </li>
-            <li class="lang-list__item">
-              <a href="#" class="lang-list__link">French</a>
-            </li>
-            <li class="lang-list__item">
-              <a href="#" class="lang-list__link">Italian</a>
-            </li>
-            <li class="lang-list__item">
-              <a href="#" class="lang-list__link">Polish</a>
-            </li>
-          </ul>
         </div>
+        <ul class="main-nav__list lang-list">
+          <li class="lang-list__item lang-list__item--active">
+            <a>English</a>
+          </li>
+          <li class="lang-list__item">
+            <a href="#" class="lang-list__link">French</a>
+          </li>
+          <li class="lang-list__item">
+            <a href="#" class="lang-list__link">Italian</a>
+          </li>
+          <li class="lang-list__item">
+            <a href="#" class="lang-list__link">Polish</a>
+          </li>
+        </ul>
       </nav>
-      <main class="page-main">
+    </header>
+    <main class="page-main">
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--google">
+            <i class="fab fa-google-plus-square"></i>
+            <span class="visually-hidden">Google+</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook">
+            <i class="fab fa-facebook"></i>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--twitter">
+            <i class="fab fa-twitter-square"></i>
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
+      </ul>
+      <div class="container">
         <h1 class="page-main__title">Secure Email Communication</h1>
         <p class="page-main__title-addition">Based in <span>Somewhere</span></p>
         <section class="account">
           <h2 class="visually-hidden">Account and social networks</h2>
           <ul class="account__list">
             <li class="account__item">
-              <a href="#" class="button">Create account</a>
+              <a href="#" class="account__create button">Create account</a>
             </li>
             <li class="account__item">
-              <a href="#">
+              <a href="#" class="account__link account__link--app-store button">
+                <i class="fab fa-apple"></i>
                 <span class="visually-hidden">App Store</span>
               </a>
             </li>
             <li class="account__item">
-              <a href="#">
+              <a href="#" class="account__link account__link--google button">
+                <i class="fab fa-google-play"></i>
                 <span class="visually-hidden">Google Play</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link social__link--google">
-                <span class="visually-hidden">Google+</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link social__link--twitter">
-                <span class="visually-hidden">Twitter</span>
               </a>
             </li>
           </ul>
@@ -103,17 +115,17 @@
               <li class="advantages__item advantages__item--privacy slider__item">
                 <h3 class="advantages__title">Swiss Privacy</h3>
                 <p class="advantages__title-addition">Data Security and Neutrality</p>
-                <p class="advantage__info">NeutronMail is incorporated in Somewhere and all our servers are located in Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
+                <p class="advantages__info">NeutronMail is incorporated in Somewhere and all our serv- ers are located in Switzerland. This means all user data is protected by strict Swiss privacy laws.</p>
               </li>
               <li class="advantages__item advantages__item--encryption slider__item">
                 <h3 class="advantages__title">Double Encryption</h3>
                 <p class="advantages__title-addition">Automatic Email Security</p>
-                <p class="advantage__info">All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt and read your emails. As a result, your encrypted emails cannot be shared with third parties.</p>
+                <p class="advantages__info">All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt and read your emails. As a result, your encrypted emails cannot<br>be shared with third parties.</p>
               </li>
               <li class="advantages__item advantages__item--email slider__item">
                 <h3 class="advantages__title">Anonymous Email</h3>
                 <p class="advantages__title-addition">Protect Your Privacy</p>
-                <p class="advantage__info">No personal information is required to create your secure email account. By default, we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.</p>
+                <p class="advantages__info">No personal information is required to create your secure email account. By default, we do not keep any IP logs which can be linked to your anonymous email account. Your privacy comes first.</p>
               </li>
             </ul>
             <p class="advantages__toggle slider__toggle">
@@ -126,11 +138,16 @@
         <section class="physical-security">
           <h3 class="physical-security__title">Physical Security</h3>
           <p class="physical-security__description">NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter, underneath 1000 meters of solid rock.</p>
-          <a href="#" class="physical-security__link">Learn more about our security features</a>
+          <a href="#" class="physical-security__link button">Learn more about our security features</a>
         </section>
         <section class="magazines">
           <h3 class="visually-hidden">Press about us</h3>
           <ul class="magazines__list">
+            <li class="magazines__item">
+              <a href="#" class="magazines__link magazines__link--wallstreet">
+                <span class="visually-hidden">Wall Street Journal</span>
+              </a>
+            </li>
             <li class="magazines__item">
               <a href="#" class="magazines__link magazines__link--nytimes">
                 <span class="visually-hidden">The New York Times</span>
@@ -167,9 +184,9 @@
             </li>
           </ul>
           <p class="news__toggle slider__toggle">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__button button-1 slider__button--active" type="button"></button>
+            <button class="slider__button button-2" type="button"></button>
+            <button class="slider__button button-3" type="button"></button>
           </p>
         </section>
         <section class="any-devices">
@@ -177,12 +194,12 @@
           <p class="any-devices__discription">The NeutronMail inbox is optimized for productivity. Each detail within our secure email service is optimized to help you better read, organize, and send email.</p>
           <ul class="shops-list">
             <li class="shops-list__item">
-              <a href="#">
+              <a href="#" class="shops-list__link shops-list__link--app-store">
                 <span class="visually-hidden">App Store</span>
               </a>
             </li>
             <li class="shops-list__item">
-              <a href="#">
+              <a href="#" class="shops-list__link shops-list__link--google-play">
                 <span class="visually-hidden">Google Play</span>
               </a>
             </li>
@@ -193,142 +210,148 @@
           <p class="partners__description">Your support helps us to protect privacy world-wide.</p>
           <ul class="donate-list">
             <li class="donate-list__item">
-              <a href="#" class="button">Upgrade to Paid Plan</a>
+              <a href="#" class="button donate-list__link">
+                <i class="fas fa-cloud-upload-alt"></i>
+                Upgrade to Paid Plan</a>
             </li>
             <li class="donate-list__item">
-              <a href="#" class="button">Donate</a>
+              <a href="#" class="button donate-list__link">
+                <i class="fas fa-dollar-sign"></i>
+                Donate</a>
             </li>
           </ul>
-          <p class="contributors">Those, who help us secure your privacy</p>
-          <ul class="contributors__list">
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--venture-mentoring">
-                <span class="visually-hidden">Venture Mentoring</span>
-              </a>
-            </li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--deltalis">
-                <span class="visually-hidden">Deltalis</span>
-              </a>
-            </li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--fongit">
-                <span class="visually-hidden">Fongit</span>
-              </a>
-            </li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--quovadis">
-                <span class="visually-hidden">QuoVadis</span>
-              </a></li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--cyberkov">
-                <span class="visually-hidden">Cyberkov</span>
-              </a>
-            </li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--radware">
-                <span class="visually-hidden">Radware</span>
-              </a>
-            </li>
-            <li class="contributors__item">
-              <a href="#" class="contributors__link contributors__link--ipmax">
-                <span class="visually-hidden">Ipmax</span>
-              </a>
-            </li>
-          </ul>
+          <div class="contributors__wrapper">
+            <p class="contributors__text">Those, who help us secure your privacy</p>
+            <ul class="contributors__list">
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--venture-mentoring">
+                  <span class="visually-hidden">Venture Mentoring</span>
+                </a>
+              </li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--deltalis">
+                  <span class="visually-hidden">Deltalis</span>
+                </a>
+              </li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--fongit">
+                  <span class="visually-hidden">Fongit</span>
+                </a>
+              </li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--quovadis">
+                  <span class="visually-hidden">QuoVadis</span>
+                </a></li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--cyberkov">
+                  <span class="visually-hidden">Cyberkov</span>
+                </a>
+              </li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--radware">
+                  <span class="visually-hidden">Radware</span>
+                </a>
+              </li>
+              <li class="contributors__item">
+                <a href="#" class="contributors__link contributors__link--ipmax">
+                  <span class="visually-hidden">Ipmax</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
-      </main>
-      <footer class="page-footer">
-        <div class="page-footer__wrapper">
-          <div class="contacts">
-            <ul class="contacts__list">
-              <li class="contacts__item">General: <a href="mailto:contact@neutronmail.ch" class="contacts__link">contact@neutronmail.ch</a></li>
-              <li class="contacts__item">Media: <a href="mailto:media@neutronmail.ch" class="contacts__link">media@neutronmail.ch</a></li>
-              <li class="contacts__item">Security: <a href="mailto:security@neutronmail.ch" class="contacts__link">security@neutronmail.ch</a></li>
-            </ul>
-            <p class="contacts-support">For support inquiries, please visit <a href="#" class="contacts-support__link">neutronmail.com/support</a></p>
-          </div>
-          <div class="footer-nav company">
-            <h3 class="company__title">Company</h3>
-            <ul class="company__list">
-              <li class="company__item">
-                <a href="#" class="company__link">Blog</a>
-              </li>
-              <li class="company__item">
-                <a href="#" class="company__link">Team</a>
-              </li>
-              <li class="company__item">
-                <a href="#" class="company__link">Careers</a>
-              </li>
-              <li class="company__item">
-                <a href="#" class="company__link">Support</a>
-              </li>
-              <li class="company__item">
-                <a href="#" class="company__link">Donate</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-nav legal">
-            <h3 class="legal__title">Legal</h3>
-            <ul class="legal__list">
-              <li class="legal__item">
-                <a href="#" class="legal__link">Imprint</a>
-              </li>
-              <li class="legal__item">
-                <a href="#" class="legal__link">Privacy Policy</a>
-              </li>
-              <li class="legal__item">
-                <a href="#" class="legal__link">Terms & Conditions</a>
-              </li>
-              <li class="legal__item">
-                <a href="#" class="legal__link">Transparency Report</a>
-              </li>
-              <li class="legal__item">
-                <a href="#" class="legal__link">Report Abuse</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-nav neutronmail">
-            <h3 class="neutronmail__title">NeutronMail</h3>
-            <ul class="neutronmail__list">
-              <li class="neutronmail__item">
-                <a href="#" class="neutronmail__link">Pricing</a>
-              </li>
-              <li class="neutronmail__item">
-                <a href="#" class="neutronmail__link">Security</a>
-              </li>
-              <li class="neutronmail__item">
-                <a href="#" class="neutronmail__link">Shop</a>
-              </li>
-              <li class="neutronmail__item">
-                <a href="#" class="neutronmail__link">Press/Media Kit</a>
-              </li>
-              <li class="neutronmail__item">
-                <a href="#" class="neutronmail__link">Onion Site</a>
-              </li>
-            </ul>
-          </div>
+      </div>
+    </main>
+    <footer class="page-footer container">
+      <div class="page-footer__wrapper">
+        <div class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">General: <a href="mailto:contact@neutronmail.ch" class="contacts__link">contact@neutronmail.ch</a></li>
+            <li class="contacts__item">Media: <a href="mailto:media@neutronmail.ch" class="contacts__link">media@neutronmail.ch</a></li>
+            <li class="contacts__item">Security: <a href="mailto:security@neutronmail.ch" class="contacts__link">security@neutronmail.ch</a></li>
+          </ul>
+          <p class="contacts-support">For support inquiries, please visit <a href="#" class="contacts-support__link">neutronmail.com/support</a></p>
         </div>
+        <div class="footer-nav company">
+          <h3 class="company__title">Company</h3>
+          <ul class="company__list">
+            <li class="company__item">
+              <a href="#" class="company__link">Blog</a>
+            </li>
+            <li class="company__item">
+              <a href="#" class="company__link">Team</a>
+            </li>
+            <li class="company__item">
+              <a href="#" class="company__link">Careers</a>
+            </li>
+            <li class="company__item">
+              <a href="#" class="company__link">Support</a>
+            </li>
+            <li class="company__item">
+              <a href="#" class="company__link">Donate</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav legal">
+          <h3 class="legal__title">Legal</h3>
+          <ul class="legal__list">
+            <li class="legal__item">
+              <a href="#" class="legal__link">Imprint</a>
+            </li>
+            <li class="legal__item">
+              <a href="#" class="legal__link">Privacy Policy</a>
+            </li>
+            <li class="legal__item">
+              <a href="#" class="legal__link">Terms & Conditions</a>
+            </li>
+            <li class="legal__item">
+              <a href="#" class="legal__link">Transparency Report</a>
+            </li>
+            <li class="legal__item">
+              <a href="#" class="legal__link">Report Abuse</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav neutronmail">
+          <h3 class="neutronmail__title">NeutronMail</h3>
+          <ul class="neutronmail__list">
+            <li class="neutronmail__item">
+              <a href="#" class="neutronmail__link">Pricing</a>
+            </li>
+            <li class="neutronmail__item">
+              <a href="#" class="neutronmail__link">Security</a>
+            </li>
+            <li class="neutronmail__item">
+              <a href="#" class="neutronmail__link">Shop</a>
+            </li>
+            <li class="neutronmail__item">
+              <a href="#" class="neutronmail__link">Press/Media Kit</a>
+            </li>
+            <li class="neutronmail__item">
+              <a href="#" class="neutronmail__link">Onion Site</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Facebook</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Twitter</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Google+</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Feedback Forum</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Reddit</a>
-          </li>
-        </ul>
-        <p class="copyright">&copy; 2017 Neutron Technologies AG. All Rights Reserved.</p>
-      </footer>
-    </header>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Facebook</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Twitter</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Google+</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Feedback Forum</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Reddit</a>
+        </li>
+      </ul>
+      <p class="copyright">&copy; 2017 Neutron Technologies AG. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
