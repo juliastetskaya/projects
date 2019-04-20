@@ -1,20 +1,29 @@
 .user-list {
   .list-style;
+  display: flex;
+  justify-content: space-between;
 }
 
 .user-list__link {
   .link-style;
-  color: #454545;
+  color: #ffffff;
   font-size: 16px;
   line-height: 25px;
   font-weight: 700;
   letter-spacing: 0.4px;
 }
 
+.user-list__item {
+  padding: 13px 43px;
+
+  background-color: #5589e8;
+  border-top: 1px solid #6e6969;
+  border-bottom: 1px solid #a5a5a7;
+}
+
 .user-list__link.button {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(88,44,126,1) 0%, rgba(98,119,205,1) 100%);
-  box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+  background-color: transparent;
 }
 
 .user-list {
@@ -22,19 +31,31 @@
 }
 
 .fa-sign-in-alt {
-  font-size: 15px;
+  font-size: 17px;
+  color: #454545;
+}
+
+.fa-user-plus {
+  color: #454545;
 }
 
 
 @media (min-width: @tablet-width) {
   .user-list {
-    display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     width: 200px;
     padding: 7px 0px;
   }
 
+  .user-list__item {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
   .user-list__link {
+    color: #454545;
     padding: 7px 21px 9px 18px;
     border-radius: 20px;
   }
@@ -42,22 +63,18 @@
   .user-list__item:first-child .user-list__link {
     padding-right: 22px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .user-list {
-    display: flex;
-    justify-content: flex-end;
-    width: 200px;
-    padding: 7px 0px;
+  .user-list__link.button {
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(88,44,126,1) 0%, rgba(98,119,205,1) 100%);
+    box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
   }
 
-  .user-list__link {
-    padding: 7px 21px 9px 18px;
-    border-radius: 20px;
+  .fa-sign-in-alt {
+    font-size: 15px;
   }
 
-  .user-list__item:first-child .user-list__link {
-    padding-right: 22px;
+  .fa-user-plus {
+    font-size: 0;
   }
 }

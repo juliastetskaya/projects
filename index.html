@@ -14,12 +14,12 @@
   <body class="page">
     <header class="page-header container">
       <a href="#" class="page-header__logo">neutron<span>Mail</span></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Open menu</button>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden ">Open menu</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="#" class="site-list__link">About</a>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link site-list__link--active">About</a>
             </li>
             <li class="site-list__item">
               <a href="#" class="site-list__link">Security </a>
@@ -44,7 +44,9 @@
                 Log in</a>
             </li>
             <li class="user-list__item">
-              <a href="#" class="user-list__link button">Sign up</a>
+              <a href="#" class="user-list__link button">
+                <i class="fas fa-user-plus"></i>
+                Sign up</a>
             </li>
           </ul>
         </div>
@@ -353,5 +355,6 @@
       </ul>
       <p class="copyright">&copy; 2017 Neutron Technologies AG. All Rights Reserved.</p>
     </footer>
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>

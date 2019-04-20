@@ -1,35 +1,46 @@
 .lang-list {
   .list-style;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .lang-list__link {
   .link-style;
-  color: #959595;
+  color: #454545;
+
 }
 
 .lang-list__item--active {
+  color: #454545;
   font-weight: 700;
 }
 
-.lang-list {
-  background-color: #cfcdf7;
+.lang-list__item {
+  padding: 15px;
 }
 
 
 @media (min-width: @tablet-width) {
   .lang-list {
-    display: flex;
-    justify-content: space-between;
     width: 237px;
     letter-spacing: 0.3px;
 
     position: absolute;
     top: -130px;
     right: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .lang-list__link,
+  .lang-list__item--active {
+    color: #959595;
   }
 
   .lang-list__item {
     position: relative;
+    padding: 0;
   }
 
   .lang-list__item::after {
