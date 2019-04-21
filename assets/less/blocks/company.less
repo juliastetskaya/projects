@@ -1,9 +1,24 @@
+.company {
+  text-align: left;
+  margin-right: 165px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
 .company__title {
   margin: 0;
   font-size: 18px;
   line-height: 23px;
   color: #5c5c5c;
   letter-spacing: 0.2px;
+
+  margin-bottom: 15px;
+}
+
+.company__item {
+  position: relative;
+  margin-bottom: 1px;
+  padding-right: 14px;
 }
 
 .company__list {
@@ -13,28 +28,24 @@
 .company__link {
   .link-style;
   color: #5c5c5c;
+
+  &:hover,
+  &:active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
 }
 
 @media (min-width: @tablet-width) {
-}
-
-@media (min-width: @desktop-width) {
   .company {
-    margin-top: 1px;
-    margin-right: 111px;
     text-align: right;
-
-    position: relative;
+    margin-right: 65px;
+    text-transform: capitalize;
+    margin-bottom: 0;
   }
 
   .company__title {
     margin-bottom: 25px;
-  }
-
-  .company__item {
-    position: relative;
-    margin-bottom: 1px;
-    padding-right: 14px;
   }
 
   .company__item::after {
@@ -42,10 +53,18 @@
     width: 4px;
     height: 4px;
     background-color: #5c5c5c;
-
     position: absolute;
     top: 10px;
     right: 2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .company {
+    margin-right: 111px;
+    margin-top: 1px;
+
+    position: relative;
   }
 
   .company::after {

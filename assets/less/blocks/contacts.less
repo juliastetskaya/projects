@@ -1,5 +1,12 @@
+.contacts {
+  position: relative;
+  margin-bottom: 50px;
+  width: 350px;
+}
+
 .contacts__list {
   .list-style;
+  margin-bottom: 23px;
 }
 
 .contacts__item {
@@ -27,19 +34,25 @@
   text-decoration: underline;
   color: #5c5c5c;
   font-weight: 700;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    border-bottom: 1px solid #5c5c5c;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    width: 300px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .contacts__list {
-    margin-bottom: 23px;
-  }
-
   .contacts {
+    margin-bottom: 0;
     margin-right: 29.5%;
-    position: relative;
+    width: auto;
   }
 
   .contacts::before {

@@ -1,9 +1,18 @@
+.legal {
+  margin-right: 165px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+
 .legal__title {
   margin: 0;
   font-size: 18px;
   line-height: 23px;
   color: #5c5c5c;
   letter-spacing: 0.2px;
+  margin-bottom: 15px;
 }
 
 .legal__list {
@@ -14,27 +23,32 @@
   .link-style;
   color: #5c5c5c;
   letter-spacing: 0.1px;
+
+  &:hover,
+  &:active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
+}
+
+.legal__item {
+  position: relative;
+  margin-bottom: 1px;
+  padding-right: 14px;
 }
 
 @media (min-width: @tablet-width) {
-}
-
-@media (min-width: @desktop-width) {
   .legal {
     min-width: 140px;
     margin-top: 1px;
     text-align: right;
-    margin-right: 82px;
+    margin-right: 65px;
+    text-transform: capitalize;
+    margin-bottom: 0;
   }
 
   .legal__title {
     margin-bottom: 25px;
-  }
-
-  .legal__item {
-    position: relative;
-    margin-bottom: 1px;
-    padding-right: 14px;
   }
 
   .legal__item::after {
@@ -46,6 +60,12 @@
     position: absolute;
     top: 11px;
     right: 1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .legal {
+    margin-right: 82px;
   }
 }
 

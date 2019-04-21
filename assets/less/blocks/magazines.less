@@ -1,59 +1,100 @@
+.magazines {
+  margin-left: -179px;
+  margin-bottom: 123px;
+  position: relative;
+}
+
 .magazines__list {
   .list-style;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 210px;
+}
+
+.magazines__link {
+  display: block;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 153px;
+}
+
+.magazines__link--wallstreet {
+  background-image: url("../img/wallstreet.jpg");
+  margin-right: 25px;
+}
+
+.magazines__link--nytimes {
+  background-image: url("../img/nytimes.jpg");
+  margin-right: 6px;
+}
+
+.magazines__link--guardian {
+  background-image: url("../img/guardian.jpg");
+  margin-right: 30px;
+}
+
+.magazines__link--forbes {
+  background-image: url("../img/forbes.jpg");
+  margin-right: 43px;
+  width: 87px;
+}
+
+.magazines__link--allgemeine {
+  background-image: url("../img/allgemeine.jpg");
+  margin-right: 44px;
+}
+
+.magazines__link--fox-news {
+  background-image: url("../img/fox-news.jpg");
+}
+
+.magazines::after {
+  content: "";
+  height: 1px;
+  background-color: rgb(185, 185, 185);
+  position: absolute;
+  width: 270px;
+  bottom: -50px;
+  left: 260px;
 }
 
 @media (min-width: @tablet-width) {
+  .magazines__list {
+    margin: 0 auto;
+    bottom: 520px;
+    left: 174px;
+
+    width: 670px;
+    margin-left: 250px;
+  }
+
+  .magazines::after {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .magazines {
     margin-left: -179px;
     margin-bottom: 123px;
-  }
-
-  .magazines__link {
-    display: block;
-    height: 66px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    width: 153px;
-  }
-
-  .magazines__link--wallstreet {
-    background-image: url("../img/wallstreet.jpg");
-    margin-right: 25px;
-  }
-
-  .magazines__link--nytimes {
-    background-image: url("../img/nytimes.jpg");
-    margin-right: 6px;
-  }
-
-  .magazines__link--guardian {
-    background-image: url("../img/guardian.jpg");
-    margin-right: 30px;
-  }
-
-  .magazines__link--forbes {
-    background-image: url("../img/forbes.jpg");
-    margin-right: 43px;
-    width: 87px
-  }
-
-  .magazines__link--allgemeine {
-    background-image: url("../img/allgemeine.jpg");
-    margin-right: 44px;
-  }
-
-  .magazines__link--fox-news {
-    background-image: url("../img/fox-news.jpg");
+    position: static;
   }
 
   .magazines__list {
+    .list-style;
+
+    display: flex;
+    justify-content: flex-start;
     position: absolute;
     bottom: 1148px;
     left: 21px;
+    width: 1170px;
+  }
+
+  .magazines::after {
+    display: none;
   }
 }

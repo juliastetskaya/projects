@@ -1,35 +1,35 @@
 .breadcrumbs__list {
   .list-style;
+
+  width: 363px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -3px;
 }
 
 .breadcrumbs__link {
   font-size: 12px;
   color: #5c5c5c;
+
+  &:hover,
+  &:active {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+  }
 }
 
-@media (min-width: @tablet-width) {
+.breadcrumbs__item {
+  position: relative;
 }
 
-@media (min-width: @desktop-width) {
-  .breadcrumbs__list {
-    width: 363px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: -3px;
-  }
+.breadcrumbs__item::after {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: -19px;
+}
 
-  .breadcrumbs__item {
-    position: relative;
-  }
-
-  .breadcrumbs__item::after {
-    content: "/";
-    position: absolute;
-    top: 0;
-    right: -19px;
-  }
-
-  .breadcrumbs__item:last-child::after {
-    display: none;
-  }
+.breadcrumbs__item:last-child::after {
+  display: none;
 }

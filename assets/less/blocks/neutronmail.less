@@ -1,9 +1,16 @@
+.neutronmail {
+  margin-right: 165px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 .neutronmail__title {
   margin: 0;
   font-size: 18px;
   line-height: 23px;
   color: #5c5c5c;
   letter-spacing: 0.2px;
+  margin-bottom: 15px;
 }
 
 .neutronmail__list {
@@ -14,27 +21,28 @@
   .link-style;
   color: #5c5c5c;
   letter-spacing: 0.1px;
+
+  &:hover,
+  &:active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
+}
+
+.neutronmail__item {
+  position: relative;
+  margin-bottom: 1px;
+  padding-right: 14px;
 }
 
 @media (min-width: @tablet-width) {
-}
-
-@media (min-width: @desktop-width) {
   .neutronmail {
     position: relative;
     min-width: 120px;
     margin-top: 1px;
     text-align: right;
-  }
-
-  .neutronmail__title {
-    margin-bottom: 25px;
-  }
-
-  .neutronmail__item {
-    position: relative;
-    margin-bottom: 1px;
-    padding-right: 14px;
+    margin-right: 0;
+    text-transform: capitalize;
   }
 
   .neutronmail__item::after {
@@ -48,6 +56,13 @@
     right: 1px;
   }
 
+  .neutronmail__title {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
   .neutronmail::after {
     content: "";
     position: absolute;

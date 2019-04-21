@@ -1,6 +1,46 @@
 
 .account {
   margin: 0 auto;
+
+  width: 320px;
+  margin-bottom: 300px;
+}
+
+.account__create {
+  position: relative;
+  z-index: 1;
+  padding: 9px 30px;
+  border-radius: 28px;
+  background: linear-gradient(90deg, rgba(100,108,146,1) 0%, rgba(95,46,105,1) 100%);
+  box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+  &:hover,
+  &:active {
+    background: linear-gradient(90deg, rgba(95,46,105,1) 0%, rgba(100,108,146,1) 100%);
+  }
+}
+
+.account__link {
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(110,72,130,1) 0%, rgba(112,73,130,1) 100%);
+  box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+  &:hover,
+  &:active {
+    background: linear-gradient(90deg, rgba(95,46,105,1) 0%, rgba(100,108,146,1) 100%);
+  }
+}
+
+.account__link--app-store {
+  position: relative;
+  padding: 8px 13px;
+  margin-right: -4px;
+  z-index: 1;
+}
+
+.account__link--google {
+  position: relative;
+  padding: 10px 9px 7px 11px;
+  margin-right: 2px;
+  z-index: 1;
 }
 
 .account__list {
@@ -15,41 +55,34 @@
 }
 
 @media (min-width: @tablet-width) {
+  .account {
+    margin: 0 auto;
+
+    width: 330px;
+    margin-bottom: 360px;
+  }
+
+  .account__link--app-store {
+    padding: 9px 14px;
+  }
+
+  .account__link--google {
+    padding: 11px 10px 8px 12px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .account {
+    margin: 0 auto;
+
     width: 385px;
     margin-bottom: 369px;
+    position: relative;
   }
 
   .account__create {
-    position: relative;
-    z-index: 1;
     padding: 14px 64px;
     border-radius: 28px;
-    background: linear-gradient(90deg, rgba(100,108,146,1) 0%, rgba(95,46,105,1) 100%);
-    box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
-  }
-
-  .account__link {
-    border-radius: 50%;
-    background: linear-gradient(90deg, rgba(110,72,130,1) 0%, rgba(112,73,130,1) 100%);
-    box-shadow: none;
-  }
-
-  .account__link--app-store {
-    position: relative;
-    padding: 9px 14px;
-    margin-right: -4px;
-    z-index: 1;
-  }
-
-  .account__link--google {
-    position: relative;
-    padding: 11px 10px 8px 12px;
-    margin-right: 2px;
-    z-index: 1;
   }
 
   .account__create::before {
@@ -61,5 +94,9 @@
     left: -220px;
     z-index: -1;
     background: radial-gradient(ellipse at top, rgb(0, 78, 255) 0%, rgba(0, 102, 255, 0.6) 10%, rgba(255, 0, 0, 0) 60%, rgba(255, 0, 0, 0) 100%);
+  }
+
+  .account__link {
+    box-shadow: none;
   }
 }

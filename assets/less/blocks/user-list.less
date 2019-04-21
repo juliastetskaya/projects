@@ -11,12 +11,18 @@
   line-height: 25px;
   font-weight: 700;
   letter-spacing: 0.4px;
+
+  &:hover,
+  &:active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 .user-list__item {
   padding: 13px 43px;
 
-  background-color: #5589e8;
+  background-color: #9485a5;
   border-top: 1px solid #6e6969;
   border-bottom: 1px solid #a5a5a7;
 }
@@ -24,10 +30,6 @@
 .user-list__link.button {
   color: #ffffff;
   background-color: transparent;
-}
-
-.user-list {
-  background-color: #f8c996;
 }
 
 .fa-sign-in-alt {
@@ -58,6 +60,13 @@
     color: #454545;
     padding: 7px 21px 9px 18px;
     border-radius: 20px;
+
+    &:hover,
+    &:active {
+      color: #582c7e;
+      box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+      border-bottom: none;
+    }
   }
 
   .user-list__item:first-child .user-list__link {
@@ -68,10 +77,16 @@
     color: #ffffff;
     background: linear-gradient(135deg, rgba(88,44,126,1) 0%, rgba(98,119,205,1) 100%);
     box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15),0px 13px 21px 0px rgba(20, 80, 204, 0.27),0px 13px 21px 0px rgba(0, 0, 0, 0.15),0px 4px 16px 0px rgba(102, 145, 233, 0.33),0px 4px 16px 0px rgba(0, 0, 0, 0.09),0px 3px 9px 0px rgba(53, 103, 205, 0.09),0px 3px 9px 0px rgba(0, 0, 0, 0.09),0px 3px 3px 0px rgba(102, 145, 233, 0.09),0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+    &:hover,
+    &:active {
+      background: linear-gradient(90deg, rgba(53,187,224,1) 0%, rgba(94,123,234,1) 100%);
+    }
+
   }
 
   .fa-sign-in-alt {
     font-size: 15px;
+    color: #582c7e;
   }
 
   .fa-user-plus {

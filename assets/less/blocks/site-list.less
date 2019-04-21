@@ -1,6 +1,5 @@
 .site-list {
   .list-style;
-  background-color: #96ddf8;
 }
 
 .site-list__link {
@@ -19,9 +18,11 @@
 }
 
 .site-list__link[href] {
+  &:hover,
   &:active {
-    background-color: #a5a5a7;
-    border-top-color: #a5a5a7;
+    color: #582c7e;
+    border-bottom: 2px solid #582c7e;
+    margin-bottom: -2px;
   }
 }
 

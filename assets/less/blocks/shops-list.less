@@ -2,26 +2,35 @@
   .list-style;
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
+  margin-left: 0;
   width: 381px;
+  margin: 0 auto;
+}
+
+.shops-list__link {
+  display: block;
+  width: 193px;
+  height: 60px;
+}
+
+.shops-list__link--app-store {
+  background: url("../img/app-store.png") no-repeat 50% 0;
+}
+
+.shops-list__link--google-play {
+  background: url("../img/google-play.png") no-repeat 50% 0;
 }
 
 @media (min-width: @tablet-width) {
+  .shops-list {
+    margin: 0;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .shops-list__link {
-    display: block;
-    width: 193px;
-    height: 60px;
-
-  }
-
-  .shops-list__link--app-store {
-    background: url("../img/app-store.png") no-repeat 50% 0;
-  }
-
-  .shops-list__link--google-play {
-    background: url("../img/google-play.png") no-repeat 50% 0;
+  .shops-list {
+    margin: 0;
+    margin-left: auto;
   }
 }

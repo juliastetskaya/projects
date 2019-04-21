@@ -3,6 +3,7 @@
   color: #7a7a7a;
   letter-spacing: 0.1px;
   margin-left: auto;
+  display: none;
 }
 
 .contributors__list {
@@ -10,6 +11,9 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contributors__text {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -25,6 +29,10 @@
     margin-left: auto;
 
     margin-top: -3px;
+  }
+
+  .contributors__text {
+    display: block;
   }
 
   .contributors__link {

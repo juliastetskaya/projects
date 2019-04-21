@@ -2,7 +2,8 @@
   .list-style;
 }
 
-@media (min-width: @tablet-width) {
+.social__link {
+  display: none;
 }
 
 @media (min-width: @desktop-width) {
@@ -26,6 +27,11 @@
     font-size: 22px;
     color: #5c5c5c;
     background-color: #ffffff;
+
+    &:hover,
+    &:active {
+      color: #5f2f6a;
+    }
   }
 
   .social__link--google {
@@ -40,4 +46,5 @@
     top: 89px;
   }
 }
+
 
