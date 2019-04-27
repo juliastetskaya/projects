@@ -16,6 +16,7 @@ palette.addEventListener('click', (event) => {
     } else if (target.classList.contains('palette__button--transform')) {
       state.currentTool = 'transform';
     }
+
     target = target.parentNode;
   }
 });

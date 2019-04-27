@@ -35,7 +35,7 @@ body {
 }
 
 .page-header {
-  margin-bottom: 79px;
+  margin-bottom: 40px;
 }
 
 .page-title {
@@ -70,7 +70,49 @@ body {
 }
 
 .colors__item {
-  padding: 12px 56px;
+  padding: 12px 20px;
+}
+
+.colors__item > span,
+input[type="color"] {
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+.colors__item > span {
+  display: inline-block;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+  border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.red-color {
+  background-color: rgb(255, 0, 0);
+}
+
+.blue-color {
+  background-color: rgb(0, 0, 255);
 }
 
 .palette__wrapper {
