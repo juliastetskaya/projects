@@ -3,6 +3,7 @@ const state = {
 };
 
 const palette = document.querySelector('.palette__wrapper');
+
 palette.addEventListener('click', (event) => {
   let { target } = event;
 
@@ -21,16 +22,32 @@ palette.addEventListener('click', (event) => {
   }
 });
 
+const currentColorElem = document.querySelector('.current-color');
+let currentColor = currentColorElem.value;
+const previuosColorElem = document.querySelector('.previous-color');
+
+
+currentColorElem.addEventListener('change', () => {
+  if (currentColorElem.value !== currentColor) {
+    previuosColorElem.style.backgroundColor = currentColor;
+    currentColor = currentColorElem.value;
+  }
+});
 
 const canvasList = document.querySelector('.canvas__list');
 
 canvasList.addEventListener('click', (event) => {
   let { target } = event;
+  const { currentTool } = state;
 
   while (target !== canvasList) {
-    if (target.tagName === 'LI' && state.currentTool === 'transform') {
-      target.classList.toggle('circle');
-      return;
+    if (target.tagName === 'LI') {
+      if (currentTool === 'transform') {
+        target.classList.toggle('circle');
+      }
+      if (currentTool === 'paint') {
+        target.style.backgroundColor = currentColor;
+      }
     }
     target = target.parentNode;
   }
