@@ -10,38 +10,40 @@
     <title>Palette</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <h1 class="page-title">CodeJam - Pallete</h1>
     </header>
-    <main class="page-main">
-      <section class="palette">
-        <div class="palette__wrapper">
-          <button class="palette__button palette__button--paint" type="button">
-            <i class="fas fa-fill-drip"></i>
-            Paint bucket
-          </button>
-          <button class="palette__button palette__button--color" type="button">
-            <i class="fas fa-eye-dropper"></i>
-            Choose color
-          </button>
-          <button class="palette__button palette__button--move" type="button">
-            <i class="fas fa-arrows-alt"></i>
-            Move
-          </button>
-          <button class="palette__button palette__button--transform" type="button">
-            <i class="fas fa-exchange-alt"></i>
-            Transform
-          </button>
-        </div>
-      </section>
-      <section class="colors">
-        <ul class="colors__list">
-          <li class="colors__item">Current color</li>
-          <li class="colors__item">Previous color</li>
-          <li class="colors__item">Red</li>
-          <li class="colors__item">Blue</li>
-        </ul>
-      </section>
+    <main class="page-main container">
+      <div class="wrapper">
+        <section class="palette">
+          <div class="palette__wrapper">
+            <button class="palette__button palette__button--paint" type="button">
+              <i class="fas fa-fill-drip"></i>
+              Paint bucket
+            </button>
+            <button class="palette__button palette__button--color" type="button">
+              <i class="fas fa-eye-dropper"></i>
+              Choose color
+            </button>
+            <button class="palette__button palette__button--move" type="button">
+              <i class="fas fa-arrows-alt"></i>
+              Move
+            </button>
+            <button class="palette__button palette__button--transform" type="button">
+              <i class="fas fa-exchange-alt"></i>
+              Transform
+            </button>
+          </div>
+        </section>
+        <section class="colors">
+          <ul class="colors__list">
+            <li class="colors__item">Current color</li>
+            <li class="colors__item">Previous color</li>
+            <li class="colors__item">Red</li>
+            <li class="colors__item">Blue</li>
+          </ul>
+        </section>
+      </div>
       <section class="canvas">
         <ul class="canvas__list">
           <li class="canvas__item"></li>

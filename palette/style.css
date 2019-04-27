@@ -27,6 +27,13 @@ body {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.container {
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.3%;
+}
+
 .page-header {
   margin-bottom: 79px;
 }
@@ -39,6 +46,15 @@ body {
   padding: 16px 72px;
 }
 
+.page-main {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  margin-right: 20%;
+}
+
 .colors__list,
 .canvas__list {
   list-style: none;
@@ -46,16 +62,10 @@ body {
   padding: 0;
 }
 
-.palette {
-  width: 228px;
-  margin-left: 29px;
-  margin-bottom: 92px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-}
-
+.palette,
 .colors {
   width: 228px;
-  margin-left: 29px;
+  margin-bottom: 92px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
 }
 
@@ -106,4 +116,24 @@ body {
   background-color: rgba(0, 0, 0, 0.12);
   top: 161px;
   left: 0;
+}
+
+.canvas__list {
+  width: 734px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.canvas__item {
+  width: 238px;
+  height: 238px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.canvas__item:nth-child(7) {
+  border-radius: 50%;
 }
