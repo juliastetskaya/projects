@@ -24,7 +24,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -49,6 +50,8 @@ body {
 .page-main {
   display: flex;
   margin-bottom: 40px;
+
+  background-color: rgb(255, 255, 255);
 }
 
 .wrapper {
@@ -66,7 +69,7 @@ body {
 .colors {
   width: 228px;
   margin-bottom: 92px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 4px rgb(175, 175, 175), 0px 0px 4px rgb(218, 218, 218);
 }
 
 .colors__item {
@@ -77,11 +80,11 @@ body {
 input[type="color"] {
   width: 23px;
   height: 23px;
-  border: 1px solid rgba(0, 0, 0, 0.24);
+  border: 1px solid rgb(201, 201, 201);
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 4px rgb(214, 214, 214), 0px 0px 4px rgb(199, 199, 199)
 }
 
 .colors__item > span {
@@ -104,7 +107,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]:focus {
   outline: none;
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 3px rgb(219, 219, 219);
 }
 
 .red-color {
@@ -135,7 +138,7 @@ input[type="color"]:focus {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgb(26, 26, 26);
 
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -155,7 +158,7 @@ input[type="color"]:focus {
   position: absolute;
   height: 1px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgb(224, 224, 224);
   top: 161px;
   left: 0;
 }
@@ -173,7 +176,7 @@ input[type="color"]:focus {
   width: 238px;
   height: 238px;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(206, 206, 206);
 }
 
 .circle {
