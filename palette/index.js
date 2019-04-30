@@ -7,50 +7,71 @@ const rgbToHex = (color) => {
   return `#${arrHex.join('')}`;
 };
 
-const state = {
-  currentTool: '',
-  currentColor: '#00eeee',
-  previousColor: '#00ff00',
-};
-
 const palette = document.querySelector('.palette__wrapper');
+const header = document.querySelector('.page-header');
+
+const paint = document.querySelector('.palette__button--paint');
+const color = document.querySelector('.palette__button--color');
+const move = document.querySelector('.palette__button--move');
+const transform = document.querySelector('.palette__button--transform');
+
 const currentColorElem = document.querySelector('.current-color');
 const previuosColorElem = document.querySelector('.previous-color');
 
+const state = {
+  currentTool: '',
+  currentColor: currentColorElem.value,
+  previousColor: getComputedStyle(previuosColorElem).backgroundColor,
+};
+
+header.addEventListener('click', () => {
+  const background = document.querySelector('.background');
+  if (background) {
+    background.classList.remove('background');
+  }
+  state.currentTool = '';
+});
+
 palette.addEventListener('click', (event) => {
+  const background = document.querySelector('.background');
   let { target } = event;
+  if (background) {
+    background.classList.remove('background');
+  }
+  state.currentTool = '';
 
   while (target !== palette) {
-    if (target.classList.contains('palette__button--paint')) {
-      state.currentTool = 'paint';
-    } else if (target.classList.contains('palette__button--color')) {
-      state.currentTool = 'color';
-    } else if (target.classList.contains('palette__button--move')) {
-      state.currentTool = 'move';
-    } else if (target.classList.contains('palette__button--transform')) {
-      state.currentTool = 'transform';
+    if (target.tagName === 'BUTTON') {
+      if (target === paint) {
+        state.currentTool = 'paint';
+      } else if (target === color) {
+        state.currentTool = 'color';
+      } else if (target === move) {
+        state.currentTool = 'move';
+      } else if (target === transform) {
+        state.currentTool = 'transform';
+      }
+      target.classList.add('background');
+      return;
     }
-
     target = target.parentNode;
   }
 });
 
-document.addEventListener('click', (event) => {
-  const { target } = event;
-  if (!target.classList.contains('palette__button--color') && state.currentTool === 'color') {
-    const { backgroundColor } = getComputedStyle(target);
-    currentColorElem.value = rgbToHex(backgroundColor);
-    previuosColorElem.style.backgroundColor = state.currentColor;
-    state.previousColor = state.currentColor;
-    state.currentColor = currentColorElem.value;
-  }
+currentColorElem.addEventListener('change', () => {
+  previuosColorElem.style.backgroundColor = state.currentColor;
+  state.previousColor = state.currentColor;
+  state.currentColor = currentColorElem.value;
 });
 
-currentColorElem.addEventListener('change', () => {
-  if (currentColorElem.value !== state.currentColor) {
-    previuosColorElem.style.backgroundColor = state.currentColor;
+document.addEventListener('click', (event) => {
+  const { target } = event;
+  if (state.currentTool === 'color' && target.tagName !== 'I' && target.parentNode !== palette && target !== currentColorElem) {
+    const col = getComputedStyle(target).backgroundColor;
     state.previousColor = state.currentColor;
-    state.currentColor = currentColorElem.value;
+    previuosColorElem.style.backgroundColor = state.currentColor;
+    state.currentColor = col;
+    currentColorElem.value = rgbToHex(col);
   }
 });
 
@@ -61,7 +82,6 @@ const getCoords = (elem) => {
     left: box.left + window.pageXOffset,
   };
 };
-
 
 const canvases = document.querySelectorAll('.canvas__item');
 
