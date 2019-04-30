@@ -14,7 +14,6 @@ const state = {
 };
 
 const palette = document.querySelector('.palette__wrapper');
-const canvasList = document.querySelector('.canvas__list');
 const currentColorElem = document.querySelector('.current-color');
 const previuosColorElem = document.querySelector('.previous-color');
 
@@ -40,8 +39,6 @@ document.addEventListener('click', (event) => {
   const { target } = event;
   if (!target.classList.contains('palette__button--color') && state.currentTool === 'color') {
     const { backgroundColor } = getComputedStyle(target);
-    console.dir(target);
-    console.log(backgroundColor);
     currentColorElem.value = rgbToHex(backgroundColor);
     previuosColorElem.style.backgroundColor = state.currentColor;
     state.previousColor = state.currentColor;
@@ -50,7 +47,6 @@ document.addEventListener('click', (event) => {
 });
 
 currentColorElem.addEventListener('change', () => {
-  console.log('!!!!!!!!!!!!!!!');
   if (currentColorElem.value !== state.currentColor) {
     previuosColorElem.style.backgroundColor = state.currentColor;
     state.previousColor = state.currentColor;
@@ -58,20 +54,50 @@ currentColorElem.addEventListener('change', () => {
   }
 });
 
+const getCoords = (elem) => {
+  const box = elem.getBoundingClientRect();
+  return {
+    top: box.top + window.pageYOffset,
+    left: box.left + window.pageXOffset,
+  };
+};
 
-canvasList.addEventListener('click', (event) => {
-  let { target } = event;
-  const { currentTool } = state;
 
-  while (target !== canvasList) {
-    if (target.tagName === 'LI') {
-      if (currentTool === 'transform') {
-        target.classList.toggle('circle');
-      }
-      if (currentTool === 'paint') {
-        target.style.backgroundColor = state.currentColor;
-      }
+const canvases = document.querySelectorAll('.canvas__item');
+
+[].forEach.call(canvases, (canvas) => {
+  canvas.addEventListener('mousedown', (event) => {
+    const { target } = event;
+
+    if (state.currentTool === 'move') {
+      const coords = getCoords(target);
+      const shiftX = event.pageX - coords.left;
+      const shiftY = event.pageY - coords.top;
+
+      const moveAt = (e) => {
+        target.style.left = `${e.pageX - shiftX}px`;
+        target.style.top = `${e.pageY - shiftY}px`;
+      };
+
+      target.style.position = 'absolute';
+      moveAt(event, shiftX, shiftY);
+      document.body.appendChild(target);
+      target.style.zIndex = 1000;
+
+      document.addEventListener('mousemove', moveAt);
+
+      target.addEventListener('mouseup', () => {
+        document.removeEventListener('mousemove', moveAt);
+        target.removeEventListener('mouseup', moveAt);
+      });
+
+      target.addEventListener('dragstart', () => false);
     }
-    target = target.parentNode;
-  }
+    if (state.currentTool === 'transform') {
+      target.classList.toggle('circle');
+    }
+    if (state.currentTool === 'paint') {
+      target.style.backgroundColor = state.currentColor;
+    }
+  });
 });
