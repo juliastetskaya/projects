@@ -30,13 +30,14 @@ body {
 
 .container {
   min-width: 900px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2.3%;
 }
 
 .page-header {
   margin-bottom: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
 }
 
 .page-title {
@@ -45,6 +46,36 @@ body {
   font-weight: 500;
 
   padding: 16px 72px;
+  position: relative;
+}
+
+.page-title::before {
+  content: "";
+
+  position: absolute;
+  top: 22px;
+  left: 0;
+
+  width: 28px;
+  height: 2px;
+
+  background-color: rgb(100, 100, 100);
+  box-shadow: 0 6px 0 0 rgb(100, 100, 100), 0 12px 0 0 rgb(100, 100, 100);
+}
+
+.page-title::after {
+  content: "";
+
+  position: absolute;
+  top: 22px;
+  right: 0;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  background-color: rgb(100, 100, 100);
+  box-shadow: 0 6px 0 0 rgb(100, 100, 100), 0 12px 0 0 rgb(100, 100, 100);
 }
 
 .page-main {
@@ -62,6 +93,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .palette,
@@ -74,6 +106,10 @@ body {
 .colors__item {
   padding: 12px 20px;
   background-color: rgb(255, 255, 255);
+}
+
+.colors__item:nth-child(2) {
+  margin-bottom: 30px;
 }
 
 .colors__item > span,
@@ -157,7 +193,8 @@ input[type="color"]:focus {
   margin-bottom: 0;
 }
 
-.palette__wrapper::before {
+.palette__wrapper::before,
+.colors__list::before {
   content: "";
   position: absolute;
   height: 1px;
@@ -165,6 +202,10 @@ input[type="color"]:focus {
   background-color: rgb(224, 224, 224);
   top: 161px;
   left: 0;
+}
+
+.colors__list::before {
+  top: 115px;
 }
 
 .canvas__blocks {

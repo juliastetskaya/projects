@@ -121,3 +121,21 @@ const canvases = document.querySelectorAll('.canvas__item');
     }
   });
 });
+
+document.addEventListener('keydown', (event) => {
+  if (event.ctrlKey || event.altKey || event.metaKey) return;
+
+  const click = new Event('click', { bubbles: true, cancelable: false });
+
+  const keyCodes = {
+    65: paint,
+    83: color,
+    68: move,
+    70: transform,
+    27: header,
+  };
+
+  if (keyCodes[event.keyCode]) {
+    keyCodes[event.keyCode].dispatchEvent(click);
+  }
+});
