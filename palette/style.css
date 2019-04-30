@@ -228,20 +228,6 @@ input[type="color"]:focus {
   border-radius: 50%;
 }
 
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-}
-
-.over {
-  border: 2px dashed rgb(100, 100, 100);
-}
-
 .background {
   background: radial-gradient(circle, rgb(63,94,251) 0%, rgb(252,70,107) 100%);
   outline: none;

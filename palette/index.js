@@ -9,6 +9,7 @@ const rgbToHex = (color) => {
 
 const palette = document.querySelector('.palette__wrapper');
 const header = document.querySelector('.page-header');
+const canvases = document.querySelectorAll('.canvas__item');
 
 const paint = document.querySelector('.palette__button--paint');
 const color = document.querySelector('.palette__button--color');
@@ -24,12 +25,43 @@ const state = {
   previousColor: getComputedStyle(previuosColorElem).backgroundColor,
 };
 
+const tools = {
+  paint,
+  color,
+  move,
+  transform,
+};
+
+if (localStorage.getItem('state') !== null) {
+  const cash = JSON.parse(localStorage.getItem('state'));
+  state.currentTool = cash.currentTool;
+  currentColorElem.value = cash.currentColor;
+  state.currentColor = cash.currentColor;
+  previuosColorElem.style.backgroundColor = cash.previousColor;
+  state.previousColor = cash.previousColor;
+  if (tools[cash.currentTool]) {
+    tools[cash.currentTool].classList.add('background');
+  }
+}
+
+if (localStorage.getItem('canvas') !== null) {
+  const canv = JSON.parse(localStorage.getItem('canvas'));
+  canv.forEach((item, index) => {
+    canvases[index].classList = item.classes;
+    canvases[index].style.backgroundColor = item.bg;
+    canvases[index].style.position = item.position;
+    canvases[index].style.left = item.offsetLeft;
+    canvases[index].style.top = item.offsetTop;
+  });
+}
+
 header.addEventListener('click', () => {
   const background = document.querySelector('.background');
   if (background) {
     background.classList.remove('background');
   }
   state.currentTool = '';
+  localStorage.setItem('state', JSON.stringify(state));
 });
 
 palette.addEventListener('click', (event) => {
@@ -39,6 +71,7 @@ palette.addEventListener('click', (event) => {
     background.classList.remove('background');
   }
   state.currentTool = '';
+  localStorage.setItem('state', JSON.stringify(state));
 
   while (target !== palette) {
     if (target.tagName === 'BUTTON') {
@@ -52,6 +85,7 @@ palette.addEventListener('click', (event) => {
         state.currentTool = 'transform';
       }
       target.classList.add('background');
+      localStorage.setItem('state', JSON.stringify(state));
       return;
     }
     target = target.parentNode;
@@ -62,6 +96,7 @@ currentColorElem.addEventListener('change', () => {
   previuosColorElem.style.backgroundColor = state.currentColor;
   state.previousColor = state.currentColor;
   state.currentColor = currentColorElem.value;
+  localStorage.setItem('state', JSON.stringify(state));
 });
 
 document.addEventListener('click', (event) => {
@@ -70,10 +105,26 @@ document.addEventListener('click', (event) => {
     const col = getComputedStyle(target).backgroundColor;
     state.previousColor = state.currentColor;
     previuosColorElem.style.backgroundColor = state.currentColor;
-    state.currentColor = col;
+    state.currentColor = rgbToHex(col);
     currentColorElem.value = rgbToHex(col);
+    localStorage.setItem('state', JSON.stringify(state));
   }
 });
+
+const local = () => {
+  const arr = [];
+  canvases.forEach((canv) => {
+    const obj = {
+      classes: canv.classList.value,
+      position: canv.style.position,
+      offsetLeft: canv.style.left,
+      offsetTop: canv.style.top,
+      bg: canv.style.backgroundColor,
+    };
+    arr.push(obj);
+  });
+  localStorage.setItem('canvas', JSON.stringify(arr));
+};
 
 const getCoords = (elem) => {
   const box = elem.getBoundingClientRect();
@@ -83,9 +134,7 @@ const getCoords = (elem) => {
   };
 };
 
-const canvases = document.querySelectorAll('.canvas__item');
-
-[].forEach.call(canvases, (canvas) => {
+canvases.forEach((canvas) => {
   canvas.addEventListener('mousedown', (event) => {
     const { target } = event;
 
@@ -100,7 +149,7 @@ const canvases = document.querySelectorAll('.canvas__item');
       };
 
       target.style.position = 'absolute';
-      moveAt(event, shiftX, shiftY);
+      moveAt(event);
       document.body.appendChild(target);
       target.style.zIndex = 1000;
 
@@ -112,12 +161,16 @@ const canvases = document.querySelectorAll('.canvas__item');
       });
 
       target.addEventListener('dragstart', () => false);
+
+      local();
     }
     if (state.currentTool === 'transform') {
       target.classList.toggle('circle');
+      local();
     }
     if (state.currentTool === 'paint') {
       target.style.backgroundColor = state.currentColor;
+      local();
     }
   });
 });
@@ -137,5 +190,9 @@ document.addEventListener('keydown', (event) => {
 
   if (keyCodes[event.keyCode]) {
     keyCodes[event.keyCode].dispatchEvent(click);
+  }
+
+  if (event.keyCode === 81) {
+    localStorage.clear();
   }
 });
