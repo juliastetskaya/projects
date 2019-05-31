@@ -4,7 +4,9 @@
   "description": "Animation player task",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "start": "webpack-dev-server --open --mode development --watch",
+    "build": "webpack --progress -p"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,17 @@
   },
   "homepage": "https://github.com/rolling-scopes-school/juliastetskaya-2019Q1#readme",
   "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.3"
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
   }
 }
