@@ -22,11 +22,11 @@ export default class App {
     const canvas = document.querySelector('.canvas');
     const ctx = canvas.getContext('2d');
 
-    canvas.addEventListener('mousedown', () => {
+    const mouseDownHandler = () => {
       isMouseDown = true;
-    });
+    };
 
-    canvas.addEventListener('mousemove', (event) => {
+    const mouseMoveHandler = (event) => {
       if (isMouseDown) {
         ctx.lineWidth = 10 * 2;
         ctx.lineTo(event.offsetX, event.offsetY);
@@ -39,11 +39,15 @@ export default class App {
         ctx.beginPath();
         ctx.moveTo(event.offsetX, event.offsetY);
       }
-    });
+    };
 
-    canvas.addEventListener('mouseup', () => {
+    const mouseUpHandler = () => {
       isMouseDown = false;
       ctx.beginPath();
-    });
+    };
+
+    canvas.addEventListener('mousedown', mouseDownHandler);
+    canvas.addEventListener('mousemove', mouseMoveHandler);
+    canvas.addEventListener('mouseup', mouseUpHandler);
   }
 }
