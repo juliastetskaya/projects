@@ -8,5 +8,5 @@ body {
 
 .canvas {
   margin: 0 auto;
-  background-color: #c4c4c4;
+  border: 1px solid #c5c5c5;
 }

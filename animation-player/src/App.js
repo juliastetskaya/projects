@@ -11,7 +11,12 @@ export default class App {
     canvas.width = 500;
     canvas.height = 500;
 
-    document.body.append(canvas);
+    const input = createElement('input');
+    input.setAttribute('type', 'color');
+
+    const label = createElement('label', 'label', 'Color: ', input);
+
+    document.body.append(label, canvas);
 
     App.draw();
   }
@@ -28,6 +33,10 @@ export default class App {
 
     const mouseMoveHandler = (event) => {
       if (isMouseDown) {
+        const userColor = document.querySelector('input').value;
+        ctx.fillStyle = userColor;
+        ctx.strokeStyle = userColor;
+
         ctx.lineWidth = 10 * 2;
         ctx.lineTo(event.offsetX, event.offsetY);
         ctx.stroke();
