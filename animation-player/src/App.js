@@ -16,7 +16,13 @@ export default class App {
 
     const label = createElement('label', 'label', 'Color: ', input);
 
-    document.body.append(label, canvas);
+    const frameCanvas = createElement('canvas', 'frame__canvas');
+    frameCanvas.width = 200;
+    frameCanvas.height = 200;
+    const frame = createElement('li', 'frames__item', frameCanvas);
+    const frames = createElement('ul', 'list__frames', frame);
+
+    document.body.append(label, frames, canvas);
 
     App.draw();
   }
@@ -53,10 +59,21 @@ export default class App {
     const mouseUpHandler = () => {
       isMouseDown = false;
       ctx.beginPath();
+
+      App.getFrame();
     };
 
     canvas.addEventListener('mousedown', mouseDownHandler);
     canvas.addEventListener('mousemove', mouseMoveHandler);
     canvas.addEventListener('mouseup', mouseUpHandler);
+  }
+
+  static getFrame() {
+    const canvas = document.querySelector('.frame__canvas');
+    const ctx = canvas.getContext('2d');
+
+    const image = document.querySelector('.canvas');
+
+    ctx.drawImage(image, 0, 0, 500, 500, 0, 0, 200, 200);
   }
 }
