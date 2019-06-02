@@ -97,7 +97,7 @@ export default class App {
     this.createFrame();
 
     this.draw();
-    // this.startAnimation();
+    this.startAnimation();
   }
 
   draw() {
@@ -148,5 +148,18 @@ export default class App {
     const image = document.querySelector('.canvas');
 
     ctx.drawImage(image, 0, 0, 500, 500, 0, 0, 200, 200);
+  }
+
+  startAnimation() {
+    let count = 0;
+    const animation = document.querySelector('.canvas__animation');
+    const ctx = animation.getContext('2d');
+
+    setInterval(() => {
+      const frames = [...document.querySelector('.list__frames').children];
+      ctx.clearRect(0, 0, 300, 300);
+      ctx.drawImage(frames[count].firstChild, 0, 0, 200, 200, 0, 0, 300, 300);
+      count = count === frames.length - 1 ? 0 : count + 1;
+    }, 1000 / 5);
   }
 }
