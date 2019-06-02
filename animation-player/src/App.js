@@ -84,7 +84,7 @@ export default class App {
     const ctx = newCanvas.getContext('2d');
     ctx.drawImage(canvas, 0, 0);
 
-    document.body.replaceChild(newCanvas, canvas);
+    document.querySelector('.page-main').replaceChild(newCanvas, canvas);
     this.draw();
   }
 
@@ -96,7 +96,7 @@ export default class App {
     newCanvas.width = 500;
     newCanvas.height = 500;
 
-    document.body.replaceChild(newCanvas, canvas);
+    document.querySelector('.page-main').replaceChild(newCanvas, canvas);
     this.draw();
   }
 
@@ -121,7 +121,10 @@ export default class App {
     });
   }
 
-  start() {
+  render() {
+    const h1 = createElement('h1', 'page-title', 'CodeJam - Animation Player');
+    const header = createElement('header', 'page-header container', h1);
+
     const canvas = createElement('canvas', 'canvas', this.text);
     canvas.width = 500;
     canvas.height = 500;
@@ -147,8 +150,8 @@ export default class App {
     const buttonFS = createElement('button', 'button-fullscreen', 'Fullscreen');
     buttonFS.setAttribute('type', 'button');
     buttonFS.addEventListener('click', () => {
-      const canv = document.querySelector('.canvas__animation');
-      canv.requestFullscreen();
+      const canvasAnimation = document.querySelector('.canvas__animation');
+      canvasAnimation.requestFullscreen();
     });
 
     const inputRange = createElement('input', 'animation__speed');
@@ -161,15 +164,11 @@ export default class App {
     const span = createElement('span', 'speed', `${this.speed} FPS`);
 
     const labelAnimation = createElement('label', 'animation__label', 'Animation speed: ', span, inputRange);
-
     const animationWrapper = createElement('div', 'animation__wrapper', animation, buttonFS, labelAnimation);
 
-    document.body.append(label, framesWrapper, canvas, animationWrapper);
+    const main = createElement('main', 'page-main container', label, framesWrapper, canvas, animationWrapper);
 
-    this.createFrame();
-
-    this.draw();
-    this.startAnimation();
+    document.body.append(header, main);
   }
 
   changeActiveFrame(event) {
@@ -266,8 +265,14 @@ export default class App {
       timer = setInterval(() => start(), 1000 / Number(this.speed));
 
       const labelAnimation = document.querySelector('.speed');
-      console.dir(labelAnimation);
       labelAnimation.innerHTML = `${this.speed} FRS`;
     });
+  }
+
+  start() {
+    this.render();
+    this.createFrame();
+    this.draw();
+    this.startAnimation();
   }
 }
