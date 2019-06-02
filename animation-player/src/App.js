@@ -3,9 +3,13 @@ import createElement from './lib';
 export default class App {
   constructor() {
     this.text = 'Your browser is not supported canvas!';
+    this.frames = [];
   }
 
-  static createFrame(counter) {
+  createFrame() {
+    const frames = document.querySelector('.list__frames');
+    const counter = frames ? frames.childNodes.length + 1 : 1;
+
     const buttonDelete = createElement('button', 'button button__delete');
     const buttonCopy = createElement('button', 'button button__copy');
     const buttonMove = createElement('button', 'button button__move');
@@ -22,13 +26,14 @@ export default class App {
     frameCanvas.width = 200;
     frameCanvas.height = 200;
 
-    buttonCopy.addEventListener('click', App.copyFrame);
+    buttonCopy.addEventListener('click', this.copyFrame.bind(this));
     const frame = createElement('li', 'frames__item', frameCanvas, number, ...buttons);
+    frames.append(frame);
 
     return frame;
   }
 
-  static copyMainCanvas() {
+  copyMainCanvas() {
     const canvas = document.querySelector('.canvas');
     const newCanvas = createElement('canvas', 'canvas');
     newCanvas.width = 500;
@@ -38,24 +43,32 @@ export default class App {
     ctx.drawImage(canvas, 0, 0);
 
     document.body.replaceChild(newCanvas, canvas);
-    App.draw();
+    this.draw();
   }
 
-  static copyFrame() {
-    const frames = document.querySelector('.list__frames');
-    const nextNumberFrame = frames.childNodes.length + 1;
-    const frame = App.createFrame(nextNumberFrame);
+  createNewFrame() {
+    this.createFrame();
 
-    // const sourceCanvas = event.target.parentNode.firstChild;
+    const canvas = document.querySelector('.canvas');
+    const newCanvas = createElement('canvas', 'canvas');
+    newCanvas.width = 500;
+    newCanvas.height = 500;
+
+    document.body.replaceChild(newCanvas, canvas);
+    this.draw();
+  }
+
+  copyFrame(event) {
+    const frame = this.createFrame();
+
+    const sourceCanvas = event.target.parentNode.firstChild;
     const distinationCanvas = frame.firstChild;
     const ctx = distinationCanvas.getContext('2d');
 
-    App.copyMainCanvas();
+    this.copyMainCanvas();
 
-    const canvas = document.querySelector('.canvas');
-    ctx.drawImage(canvas, 0, 0, 500, 500, 0, 0, 200, 200);
-
-    frames.append(frame);
+    // const canvas = document.querySelector('.canvas');
+    ctx.drawImage(sourceCanvas, 0, 0);
   }
 
   start() {
@@ -68,20 +81,26 @@ export default class App {
 
     const label = createElement('label', 'label', 'Color: ', input);
 
-    const frame = App.createFrame(1);
-    const frames = createElement('ul', 'list__frames', frame);
+    const frames = createElement('ul', 'list__frames');
+
+    const button = createElement('button', 'button__new-frame', 'Add new frame');
+    button.addEventListener('click', this.createNewFrame.bind(this));
+
+    const framesWrapper = createElement('div', 'frames__wrapper', frames, button);
 
     const animation = createElement('canvas', 'canvas__animation');
     animation.width = 300;
     animation.height = 300;
 
-    document.body.append(label, frames, canvas, animation);
+    document.body.append(label, framesWrapper, canvas, animation);
 
-    App.draw();
-    setInterval(App.startAnimation, 1000);
+    this.createFrame();
+
+    this.draw();
+    // this.startAnimation();
   }
 
-  static draw() {
+  draw() {
     let isMouseDown = false;
 
     const canvas = document.querySelector('.canvas');
@@ -114,7 +133,7 @@ export default class App {
       isMouseDown = false;
       ctx.beginPath();
 
-      App.getFrame();
+      this.getFrame();
     };
 
     canvas.addEventListener('mousedown', mouseDownHandler);
@@ -122,22 +141,12 @@ export default class App {
     canvas.addEventListener('mouseup', mouseUpHandler);
   }
 
-  static getFrame() {
+  getFrame() {
     const canvas = document.querySelector('.canvas--active');
     const ctx = canvas.getContext('2d');
 
     const image = document.querySelector('.canvas');
 
     ctx.drawImage(image, 0, 0, 500, 500, 0, 0, 200, 200);
-  }
-
-  static startAnimation() {
-    const frames = [...document.querySelector('.list__frames').children];
-    const animation = document.querySelector('.canvas__animation');
-    const ctx = animation.getContext('2d');
-
-    frames.forEach((frame) => {
-      setTimeout(() => ctx.drawImage(frame.firstChild, 0, 0, 200, 200, 0, 0, 300, 300), 500);
-    });
   }
 }

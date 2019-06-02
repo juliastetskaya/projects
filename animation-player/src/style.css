@@ -52,9 +52,13 @@ body {
   padding: 0;
 
   margin-right: 30px;
-  height: 100vh;
+
   display: flex;
   flex-direction: column;
+}
+
+.frames__wrapper {
+  height: 100vh;
   overflow-y: scroll;
   padding-right: 20px;
   padding-bottom: 40px;
@@ -146,4 +150,15 @@ body {
 
 .canvas--active ~ .number__frame {
   background-color: #ffd700;
+}
+
+.button__new-frame {
+  width: 206px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+
+  font-size: 16px;
+
+  margin-bottom: 30px;
 }
